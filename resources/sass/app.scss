@@ -1,0 +1,96 @@
+@import './bootstrap.min.css';
+@font-face {
+    font-family: 'amir';
+    src: url('/fonts/iran.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/iran.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/fonts/iran.ttf')  format('truetype'), /* Safari, Android, iOS */
+  }
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: 'amir';
+}
+.vs-notifications h3{
+    text-align: center!important;
+}
+.vs-notifications p{
+    text-align: center!important;
+}
+@media screen and (max-width:900px){
+    .background{
+        background: url('/img/back_mobile.jpg')!important;
+        height: 100vh; 
+    }
+}
+.background{
+    background: url('/img/background.jpg');
+    background-size: contain;
+    height: 100vh; 
+}
+.form_layout{
+    margin: 40px 0px 20px 0px;
+}
+.form_box{
+    background: white;
+    border-radius: 40px;
+    height: 680px;
+}
+
+.head{
+    text-align:center
+}
+.logo{
+    text-align:center
+}
+.content{
+    text-align:center;
+}
+.submit{
+    text-align:center
+}
+.footer{
+    text-align:center
+}
+.vs-con-input-label.is-label-placeholder{
+    width: 90%;
+}
+.vs-con-input-label.is-label-placeholder{
+    margin: auto;
+    text-align: right;
+}
+.vuesax-app-is-ltr .vs-input--input.icon-after-input+.vs-input--placeholder{
+    padding-right: 40px!important;
+}
+.vuesax-app-is-ltr .vs-input--input.hasIcon.icon-after-input+.vs-input--placeholder{
+    padding-top: 10px;
+}
+.vs-con-input-label.is-label-placeholder{
+    margin-top:28px!important;
+}
+.vuesax-app-is-ltr .vs-input--input.icon-after-input{
+    padding-right: 40px!important;  
+}
+
+.form_box_verify{
+    background: white;
+    border-radius: 40px;
+    height: 480px;
+}
+.form_box_login{
+    background: white;
+    border-radius: 40px;
+    height: 410px;
+}
+.vs-con-input-label{
+    width: 40%;
+    margin: auto;
+    margin-top: 5%;
+}
+.btn_verify_code{
+    margin-top: 30px;
+}
+.form_box_success{
+    background: white;
+    border-radius: 40px;
+    height: 420px; 
+}
