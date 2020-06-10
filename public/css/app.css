@@ -92,13 +92,13 @@ body {
 
 .form_box_verify {
   background: #FBFBFB;
-  border-radius: 40px;
+  border-radius: 10px;
   height: 480px;
 }
 
 .form_box_login {
   background: #FBFBFB;
-  border-radius: 40px;
+  border-radius: 10px;
   height: 410px;
 }
 
@@ -114,7 +114,7 @@ body {
 
 .form_box_success {
   background: #FBFBFB;
-  border-radius: 40px;
+  border-radius: 10px;
   height: 420px;
 }
 
