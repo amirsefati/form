@@ -189,10 +189,6 @@ export default {
                 evt.preventDefault();;
                 this.$vs.notify({title:'ورودی نامعتبر',text:'در فیلد شماره تلفن فقط عدد وارد کنید',color:'danger',position:'top-center'})
 
-            }else if(this.phone.length > 12){
-                this.$vs.notify({title:'ورودی نامعتبر',text:'فیلد شماره تلفن باید دارای 11 کاراکتر باشد',color:'danger',position:'top-center'})
-                evt.preventDefault();;
-
             } else {
                 return true;
             }
