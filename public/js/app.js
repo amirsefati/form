@@ -4979,6 +4979,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5143,6 +5144,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -5443,15 +5445,6 @@ __webpack_require__.r(__webpack_exports__);
           color: 'danger',
           position: 'top-center'
         });
-      } else if (this.phone.length > 10) {
-        this.$vs.notify({
-          title: 'ورودی نامعتبر',
-          text: 'فیلد شماره تلفن باید دارای 11 کاراکتر باشد',
-          color: 'danger',
-          position: 'top-center'
-        });
-        evt.preventDefault();
-        ;
       } else {
         return true;
       }
@@ -5545,6 +5538,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
     logout_system: function logout_system() {
@@ -5572,6 +5566,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -24083,7 +24078,7 @@ var render = function() {
     _c("div", { staticClass: "row background" }, [
       _c("div", { staticClass: "col-md-4 col-1" }, [_vm._v(" ")]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-4 col-10 form_layout pl-0 pr-3" }, [
+      _c("div", { staticClass: "col-md-4 col-10 form_layout pl-0" }, [
         _c("div", { staticClass: "form_box" }, [
           _vm._m(0),
           _vm._v(" "),
@@ -24280,7 +24275,14 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12 logo" }, [
-        _c("img", { attrs: { src: "/img/logo.svg", width: "200px", alt: "" } })
+        _c("img", {
+          attrs: {
+            src: "/img/logo.svg",
+            width: "200px",
+            height: "45px",
+            alt: ""
+          }
+        })
       ])
     ])
   }
@@ -24606,7 +24608,14 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12 logo" }, [
-        _c("img", { attrs: { src: "/img/logo.svg", width: "200px", alt: "" } })
+        _c("img", {
+          attrs: {
+            src: "/img/logo.svg",
+            width: "200px",
+            height: "45px",
+            alt: ""
+          }
+        })
       ])
     ])
   },
@@ -24732,7 +24741,14 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12 logo" }, [
-        _c("img", { attrs: { src: "/img/logo.svg", width: "200px", alt: "" } })
+        _c("img", {
+          attrs: {
+            src: "/img/logo.svg",
+            width: "200px",
+            height: "45px",
+            alt: ""
+          }
+        })
       ])
     ])
   },
@@ -24942,7 +24958,14 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12 logo" }, [
-        _c("img", { attrs: { src: "/img/logo.svg", width: "200px", alt: "" } })
+        _c("img", {
+          attrs: {
+            src: "/img/logo.svg",
+            width: "200px",
+            height: "45px",
+            alt: ""
+          }
+        })
       ])
     ])
   },

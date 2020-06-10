@@ -2,7 +2,7 @@
     <div style="width:99%">
         <div class="row background">
             <div class="col-md-4 col-1">&nbsp;</div>
-            <div class="col-md-4 col-10 form_layout pl-0 pr-3">
+            <div class="col-md-4 col-10 form_layout pl-0">
                 <div class="form_box">
                     <div class="row">
                         <div class="col-md-12 head">
@@ -13,7 +13,8 @@
                     <div class="row">
                         <div class="col-md-12 logo">
 
-                            <img src="/img/logo.svg" width="200px" alt="">
+                            <img src="/img/logo.svg" width="200px"  height="45px" alt="">
+
                         </div>
                     </div>
 
