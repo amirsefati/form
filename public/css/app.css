@@ -25,7 +25,7 @@ body {
 @media screen and (max-width: 900px) {
   .background {
     background: url("/img/back_mobile.jpg") !important;
-    height: 100vh;
+    height: 100%;
   }
 }
 
@@ -40,8 +40,8 @@ body {
 }
 
 .form_box {
-  background: white;
-  border-radius: 40px;
+  background: #FBFBFB;
+  border-radius: 10px;
   height: 680px;
 }
 
@@ -91,13 +91,13 @@ body {
 }
 
 .form_box_verify {
-  background: white;
+  background: #FBFBFB;
   border-radius: 40px;
   height: 480px;
 }
 
 .form_box_login {
-  background: white;
+  background: #FBFBFB;
   border-radius: 40px;
   height: 410px;
 }
@@ -113,7 +113,7 @@ body {
 }
 
 .form_box_success {
-  background: white;
+  background: #FBFBFB;
   border-radius: 40px;
   height: 420px;
 }

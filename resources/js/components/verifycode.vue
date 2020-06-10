@@ -13,8 +13,9 @@
 
                     <div class="row">
                         <div class="col-md-12 logo">
-                                <img src="/img/logo.png" alt="">
-                        </div>
+
+                            <img src="/img/logo.svg" width="200px" alt="">
+                     </div>
                     </div>
 
                     <div class="row">
@@ -59,9 +60,7 @@ export default {
         }
     },
     created(){
-        setTimeout(() => {
-            this.send = 1
-        }, 60000);
+     
 
         axios.post('/getuser_phone',{
             data : {'phone':'ok'}
@@ -73,6 +72,9 @@ export default {
             }
             else{
                 this.phone = response.data.phone
+                   setTimeout(() => {
+                        this.send = 1
+                    }, 60000);
             }
         })
             this.countDownTimer()
@@ -105,7 +107,9 @@ export default {
             axios.post('/send_again_sms',{
                 data : {'phone' : this.phone}
             }).then((response)=>{
-                
+                if(response.data === 100){
+                    this.$vs.notify({title:'ارسال مجدد',text:'پیامک مجددا با موفقیت برای شما ارسال گردید',color:'success',position:'top-center'})
+                }
             })
         },
           isNumber: function(evt) {

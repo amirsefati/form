@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\Sendsms;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,6 +25,8 @@ class UserController extends Controller
         }else{
             $code = rand(123123,989778);
             //Smsirlaravel::ultraFastSend(['name'=>$name,'phone'=>$phone,'code'=>$code],26866,$phone);
+            dispatch(new Sendsms($name,$phone,$code));
+
             User::create([
                 'name' => $name,
                 'brand' => $brand,
@@ -111,6 +114,12 @@ class UserController extends Controller
 
     public function send_again_sms(Request $request){
         $phone = $request->data['phone'];
-        //send sms code
+        $name = User::where('phone',$phone)->first()->name;
+        $code = rand(123123,989778);
+        User::where('phone',$phone)->update([
+            'code' => $code
+        ]);
+        dispatch(new Sendsms($name,$phone,$code));
+        return 100;
     }
 }

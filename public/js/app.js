@@ -4978,6 +4978,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5142,6 +5143,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -5542,6 +5544,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
     logout_system: function logout_system() {
@@ -5619,6 +5622,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5631,9 +5635,6 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    setTimeout(function () {
-      _this.send = 1;
-    }, 60000);
     axios.post('/getuser_phone', {
       data: {
         'phone': 'ok'
@@ -5643,6 +5644,9 @@ __webpack_require__.r(__webpack_exports__);
       } else if (response.data.phone === 1) {//this.$router.push('success').catch(err => {})
       } else {
         _this.phone = response.data.phone;
+        setTimeout(function () {
+          _this.send = 1;
+        }, 60000);
       }
     });
     this.countDownTimer();
@@ -5688,12 +5692,23 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     send_code_b: function send_code_b() {
+      var _this4 = this;
+
       this.send = 0;
       axios.post('/send_again_sms', {
         data: {
           'phone': this.phone
         }
-      }).then(function (response) {});
+      }).then(function (response) {
+        if (response.data === 100) {
+          _this4.$vs.notify({
+            title: 'ارسال مجدد',
+            text: 'پیامک مجددا با موفقیت برای شما ارسال گردید',
+            color: 'success',
+            position: 'top-center'
+          });
+        }
+      });
     },
     isNumber: function isNumber(evt) {
       evt = evt ? evt : window.event;
@@ -24066,9 +24081,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticStyle: { width: "99%" } }, [
     _c("div", { staticClass: "row background" }, [
-      _c("div", { staticClass: "col-md-4 col-1" }),
+      _c("div", { staticClass: "col-md-4 col-1" }, [_vm._v(" ")]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-4 col-10 form_layout p-0" }, [
+      _c("div", { staticClass: "col-md-4 col-10 form_layout pl-0 pr-3" }, [
         _c("div", { staticClass: "form_box" }, [
           _vm._m(0),
           _vm._v(" "),
@@ -24265,7 +24280,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12 logo" }, [
-        _c("img", { attrs: { src: "/img/logo.png", alt: "" } })
+        _c("img", { attrs: { src: "/img/logo.svg", width: "200px", alt: "" } })
       ])
     ])
   }
@@ -24591,7 +24606,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12 logo" }, [
-        _c("img", { attrs: { src: "/img/logo.png", alt: "" } })
+        _c("img", { attrs: { src: "/img/logo.svg", width: "200px", alt: "" } })
       ])
     ])
   },
@@ -24717,7 +24732,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12 logo" }, [
-        _c("img", { attrs: { src: "/img/logo.png", alt: "" } })
+        _c("img", { attrs: { src: "/img/logo.svg", width: "200px", alt: "" } })
       ])
     ])
   },
@@ -24927,7 +24942,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12 logo" }, [
-        _c("img", { attrs: { src: "/img/logo.png", alt: "" } })
+        _c("img", { attrs: { src: "/img/logo.svg", width: "200px", alt: "" } })
       ])
     ])
   },

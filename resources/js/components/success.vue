@@ -12,7 +12,8 @@
 
                     <div class="row">
                         <div class="col-md-12 logo">
-                                <img src="/img/logo.png" alt="">
+
+                            <img src="/img/logo.svg" width="200px" alt="">
 
                         </div>
                     </div>
