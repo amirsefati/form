@@ -66,10 +66,7 @@ export default {
         }
     },
     created(){
-        this.$vs.loading({type:'sound',background:'white'})
-        setTimeout( ()=> {
-            this.$vs.loading.close()
-        },500);
+        
     },
     methods:{
         submit : function(){

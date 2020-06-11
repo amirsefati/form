@@ -14,6 +14,7 @@ import verifycode from './components/verifycode'
 import Navi from './components/navigation'
 import success from './components/success'
 import login from './components/login'
+import welcome from './components/welcome'
 
 const router = new VueRouter({
     mode:'history',
@@ -42,6 +43,11 @@ const router = new VueRouter({
             path:'/loginm',
             name:'loginm',
             component:login
+        },
+        {
+            path:'/welcome',
+            name:'welcome',
+            component:welcome
         }
     ]
 });

@@ -9,7 +9,7 @@
 <script>
 export default {
     created(){
-        this.$router.push('index').catch(err => {})
+        this.$router.push('welcome').catch(err => {})
     }
 }
 </script>
